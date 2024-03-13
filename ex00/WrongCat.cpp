@@ -13,6 +13,8 @@ WrongCat::WrongCat(const WrongCat &wrongCat)
 
 WrongCat &WrongCat::operator=(const WrongCat &wrongCat)
 {
+	if (this == &wrongCat)
+		return *this;
 	type = wrongCat.type;
 	return *this;
 }
